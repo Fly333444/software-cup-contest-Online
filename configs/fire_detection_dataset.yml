@@ -1,0 +1,24 @@
+# Dataset config for Fire Detection Competition (3 classes)
+# Images from VR environment, 1920x1080
+
+metric: COCO
+num_classes: 3
+
+TrainDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/train.json
+  dataset_dir: .
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/val.json
+  dataset_dir: .
+  allow_empty: true
+
+TestDataset:
+  name: ImageFolder
+  anno_path: A_train/val.json
+  dataset_dir: .

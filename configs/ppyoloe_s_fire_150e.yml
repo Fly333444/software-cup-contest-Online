@@ -1,0 +1,118 @@
+# PP-YOLOE-S training config for Fire Detection Competition
+# 3 classes: battery, board, fire
+# 405 images, 1920x1080 resolution, VR environment
+# Optimized for small dataset transfer learning
+
+_BASE_: [
+  '../PaddleDetection/configs/datasets/coco_detection.yml',
+  '../PaddleDetection/configs/runtime.yml',
+  '../PaddleDetection/configs/ppyoloe/_base_/optimizer_300e.yml',
+  '../PaddleDetection/configs/ppyoloe/_base_/ppyoloe_crn.yml',
+  '../PaddleDetection/configs/ppyoloe/_base_/ppyoloe_reader.yml',
+]
+
+# ======== Override dataset paths ========
+metric: COCO
+num_classes: 3
+
+TrainDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/train.json
+  dataset_dir: .
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+
+EvalDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/val.json
+  dataset_dir: .
+  allow_empty: true
+
+TestDataset:
+  name: ImageFolder
+  anno_path: A_train/val.json
+  dataset_dir: .
+
+# ======== Model scaling (PP-YOLOE-S) ========
+depth_mult: 0.33
+width_mult: 0.50
+
+# ======== Training settings ========
+epoch: 100
+log_iter: 20
+snapshot_epoch: 10
+print_flops: false
+
+pretrain_weights: https://paddledet.bj.bcebos.com/models/pretrained/CSPResNetb_s_pretrained.pdparams
+weights: output/ppyoloe_s_fire_150e/model_final
+
+# ======== Learning rate (conservative for small dataset) ========
+LearningRate:
+  base_lr: 0.0002
+  schedulers:
+    - name: CosineDecay
+      max_epochs: 120
+    - name: LinearWarmup
+      start_factor: 0.
+      epochs: 10
+
+# ======== Reader: data augmentation + batch size ========
+TrainReader:
+  sample_transforms:
+    - Decode: {}
+    - RandomDistort: {}
+    - RandomExpand: {fill_value: [123.675, 116.28, 103.53]}
+    - RandomCrop: {}
+    - RandomFlip: {}
+  batch_transforms:
+    - BatchRandomResize: {target_size: [480, 512, 544, 576, 608, 640, 672, 704, 736, 768], random_size: True, random_interp: True, keep_ratio: False}
+    - NormalizeImage: {mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225], is_scale: True}
+    - Permute: {}
+    - PadGT: {}
+  batch_size: 4
+  shuffle: true
+  drop_last: true
+  use_shared_memory: true
+  collate_batch: true
+
+EvalReader:
+  sample_transforms:
+    - Decode: {}
+    - Resize: {target_size: [640, 640], keep_ratio: False, interp: 2}
+    - NormalizeImage: {mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225], is_scale: True}
+    - Permute: {}
+  batch_size: 4
+
+TestReader:
+  inputs_def:
+    image_shape: [3, 640, 640]
+  sample_transforms:
+    - Decode: {}
+    - Resize: {target_size: [640, 640], keep_ratio: False, interp: 2}
+    - NormalizeImage: {mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225], is_scale: True}
+    - Permute: {}
+  batch_size: 1
+
+# ======== Head: NMS post-process for 3-class detection ========
+PPYOLOEHead:
+  fpn_strides: [32, 16, 8]
+  grid_cell_scale: 5.0
+  grid_cell_offset: 0.5
+  static_assigner_epoch: 100
+  use_varifocal_loss: True
+  loss_weight: {class: 1.0, iou: 2.5, dfl: 0.5}
+  static_assigner:
+    name: ATSSAssigner
+    topk: 9
+  assigner:
+    name: TaskAlignedAssigner
+    topk: 13
+    alpha: 1.0
+    beta: 6.0
+  nms:
+    name: MultiClassNMS
+    nms_top_k: 1000
+    keep_top_k: 300
+    score_threshold: 0.01
+    nms_threshold: 0.7

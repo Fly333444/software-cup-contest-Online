@@ -1,0 +1,140 @@
+# PicoDet-S training config for Fire Detection Competition
+# 3 classes: battery, board, fire
+# Optimized for small dataset (405 images), transfer learning from COCO pretrain
+
+_BASE_: [
+  '../PaddleDetection/configs/datasets/coco_detection.yml',
+  '../PaddleDetection/configs/runtime.yml',
+  '../PaddleDetection/configs/picodet/_base_/picodet_v2.yml',
+  '../PaddleDetection/configs/picodet/_base_/optimizer_300e.yml',
+]
+
+# ======== Dataset ========
+metric: COCO
+num_classes: 3
+
+TrainDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/train.json
+  dataset_dir: .
+  data_fields: ['image', 'gt_bbox', 'gt_class', 'is_crowd']
+  allow_empty: true
+
+EvalDataset:
+  name: COCODataSet
+  image_dir: A_train/Image
+  anno_path: A_train/val.json
+  dataset_dir: .
+  allow_empty: true
+
+TestDataset:
+  name: ImageFolder
+  anno_path: A_train/val.json
+  dataset_dir: .
+
+# ======== Model ========
+pretrain_weights: https://paddle-imagenet-models-name.bj.bcebos.com/dygraph/legendary_models/PPLCNet_x0_75_pretrained.pdparams
+weights: output/picodet_s_fire_100e/model_final
+find_unused_parameters: True
+use_ema: true
+epoch: 100
+snapshot_epoch: 10
+
+LCNet:
+  scale: 0.75
+  feature_maps: [3, 4, 5]
+
+LCPAN:
+  out_channels: 96
+
+PicoHeadV2:
+  conv_feat:
+    name: PicoFeat
+    feat_in: 96
+    feat_out: 96
+    num_convs: 2
+    num_fpn_stride: 4
+    norm_type: bn
+    share_cls_reg: True
+    use_se: True
+  feat_in_chan: 96
+  fpn_stride: [8, 16, 32, 64]
+  prior_prob: 0.01
+  reg_max: 7
+  cell_offset: 0.5
+  grid_cell_scale: 5.0
+  static_assigner_epoch: 100
+  use_align_head: True
+  static_assigner:
+    name: ATSSAssigner
+    topk: 9
+  assigner:
+    name: TaskAlignedAssigner
+    topk: 13
+    alpha: 1.0
+    beta: 6.0
+  loss_class:
+    name: VarifocalLoss
+    use_sigmoid: False
+    iou_weighted: True
+    loss_weight: 1.0
+  loss_dfl:
+    name: DistributionFocalLoss
+    loss_weight: 0.5
+  loss_bbox:
+    name: GIoULoss
+    loss_weight: 2.5
+  nms:
+    name: MultiClassNMS
+    nms_top_k: 1000
+    keep_top_k: 100
+    score_threshold: 0.025
+    nms_threshold: 0.6
+
+# ======== Learning rate (scaled from 0.32 for batch 64 to 0.02 for batch 4) ========
+LearningRate:
+  base_lr: 0.02
+  schedulers:
+    - name: CosineDecay
+      max_epochs: 100
+    - name: LinearWarmup
+      start_factor: 0.1
+      steps: 500
+
+# ======== Reader ========
+worker_num: 2
+
+TrainReader:
+  sample_transforms:
+    - Decode: {}
+    - RandomCrop: {}
+    - RandomFlip: {prob: 0.5}
+    - RandomDistort: {}
+  batch_transforms:
+    - BatchRandomResize: {target_size: [416, 448, 480, 512, 544, 576, 608, 640], random_size: True, random_interp: True, keep_ratio: False}
+    - NormalizeImage: {is_scale: true, mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+    - Permute: {}
+    - PadGT: {}
+  batch_size: 4
+  shuffle: true
+  drop_last: true
+  use_shared_memory: true
+
+EvalReader:
+  sample_transforms:
+    - Decode: {}
+    - Resize: {interp: 2, target_size: [640, 640], keep_ratio: False}
+    - NormalizeImage: {is_scale: true, mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+    - Permute: {}
+  batch_size: 4
+
+TestReader:
+  inputs_def:
+    image_shape: [1, 3, 640, 640]
+  sample_transforms:
+    - Decode: {}
+    - Resize: {interp: 2, target_size: [640, 640], keep_ratio: False}
+    - NormalizeImage: {is_scale: true, mean: [0.485, 0.456, 0.406], std: [0.229, 0.224, 0.225]}
+    - Permute: {}
+  batch_size: 1
