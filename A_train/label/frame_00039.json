@@ -1,0 +1,157 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1403,
+          511
+        ],
+        [
+          1440,
+          511
+        ],
+        [
+          1440,
+          573
+        ],
+        [
+          1403,
+          573
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1368,
+          498
+        ],
+        [
+          1421,
+          498
+        ],
+        [
+          1421,
+          571
+        ],
+        [
+          1368,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          446,
+          341
+        ],
+        [
+          623,
+          341
+        ],
+        [
+          623,
+          752
+        ],
+        [
+          446,
+          752
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1061,
+          506
+        ],
+        [
+          1088,
+          506
+        ],
+        [
+          1088,
+          571
+        ],
+        [
+          1061,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1586,
+          494
+        ],
+        [
+          1719,
+          494
+        ],
+        [
+          1719,
+          627
+        ],
+        [
+          1586,
+          627
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00039.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "description": ""
+}

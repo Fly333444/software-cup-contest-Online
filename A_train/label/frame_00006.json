@@ -1,0 +1,330 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          800,
+          469
+        ],
+        [
+          867,
+          469
+        ],
+        [
+          867,
+          619
+        ],
+        [
+          800,
+          619
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          736,
+          512
+        ],
+        [
+          767,
+          512
+        ],
+        [
+          767,
+          566
+        ],
+        [
+          736,
+          566
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1236,
+          500
+        ],
+        [
+          1281,
+          500
+        ],
+        [
+          1281,
+          583
+        ],
+        [
+          1236,
+          583
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          956,
+          514
+        ],
+        [
+          990,
+          514
+        ],
+        [
+          990,
+          561
+        ],
+        [
+          956,
+          561
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1881,
+          492
+        ],
+        [
+          1919,
+          492
+        ],
+        [
+          1919,
+          590
+        ],
+        [
+          1881,
+          590
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1181,
+          518
+        ],
+        [
+          1210,
+          518
+        ],
+        [
+          1210,
+          557
+        ],
+        [
+          1181,
+          557
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1481,
+          522
+        ],
+        [
+          1524,
+          522
+        ],
+        [
+          1524,
+          568
+        ],
+        [
+          1481,
+          568
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1664,
+          505
+        ],
+        [
+          1724,
+          505
+        ],
+        [
+          1724,
+          571
+        ],
+        [
+          1664,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1301,
+          524
+        ],
+        [
+          1336,
+          524
+        ],
+        [
+          1336,
+          565
+        ],
+        [
+          1301,
+          565
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1296,
+          522
+        ],
+        [
+          1329,
+          522
+        ],
+        [
+          1329,
+          561
+        ],
+        [
+          1296,
+          561
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1069,
+          518
+        ],
+        [
+          1122,
+          518
+        ],
+        [
+          1122,
+          582
+        ],
+        [
+          1069,
+          582
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00006.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

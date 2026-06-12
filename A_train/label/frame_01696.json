@@ -1,0 +1,243 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1736,
+          376
+        ],
+        [
+          1759,
+          376
+        ],
+        [
+          1759,
+          408
+        ],
+        [
+          1736,
+          408
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1185,
+          450
+        ],
+        [
+          1320,
+          450
+        ],
+        [
+          1320,
+          665
+        ],
+        [
+          1185,
+          665
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          364,
+          495
+        ],
+        [
+          450,
+          495
+        ],
+        [
+          450,
+          583
+        ],
+        [
+          364,
+          583
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          244,
+          496
+        ],
+        [
+          434,
+          496
+        ],
+        [
+          434,
+          821
+        ],
+        [
+          244,
+          821
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          868,
+          489
+        ],
+        [
+          938,
+          489
+        ],
+        [
+          938,
+          607
+        ],
+        [
+          868,
+          607
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          920,
+          498
+        ],
+        [
+          970,
+          498
+        ],
+        [
+          970,
+          570
+        ],
+        [
+          920,
+          570
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1088,
+          489
+        ],
+        [
+          1137,
+          489
+        ],
+        [
+          1137,
+          583
+        ],
+        [
+          1088,
+          583
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          534,
+          504
+        ],
+        [
+          583,
+          504
+        ],
+        [
+          583,
+          577
+        ],
+        [
+          534,
+          577
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_01696.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

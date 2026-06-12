@@ -1,0 +1,244 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          483,
+          500
+        ],
+        [
+          548,
+          500
+        ],
+        [
+          548,
+          592
+        ],
+        [
+          483,
+          592
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1202,
+          381
+        ],
+        [
+          1354,
+          381
+        ],
+        [
+          1354,
+          666
+        ],
+        [
+          1202,
+          666
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          552,
+          511
+        ],
+        [
+          601,
+          511
+        ],
+        [
+          601,
+          578
+        ],
+        [
+          552,
+          578
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          133,
+          478
+        ],
+        [
+          227,
+          478
+        ],
+        [
+          227,
+          586
+        ],
+        [
+          133,
+          586
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1103,
+          493
+        ],
+        [
+          1220,
+          493
+        ],
+        [
+          1220,
+          631
+        ],
+        [
+          1103,
+          631
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          960,
+          520
+        ],
+        [
+          991,
+          520
+        ],
+        [
+          991,
+          573
+        ],
+        [
+          960,
+          573
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          570,
+          313
+        ],
+        [
+          896,
+          313
+        ],
+        [
+          896,
+          821
+        ],
+        [
+          570,
+          821
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          858,
+          510
+        ],
+        [
+          893,
+          510
+        ],
+        [
+          893,
+          572
+        ],
+        [
+          858,
+          572
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00152.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "description": ""
+}

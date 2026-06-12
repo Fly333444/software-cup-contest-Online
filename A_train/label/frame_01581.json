@@ -1,0 +1,273 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1296,
+          517
+        ],
+        [
+          1332,
+          517
+        ],
+        [
+          1332,
+          568
+        ],
+        [
+          1296,
+          568
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1204,
+          511
+        ],
+        [
+          1238,
+          511
+        ],
+        [
+          1238,
+          561
+        ],
+        [
+          1204,
+          561
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          770,
+          499
+        ],
+        [
+          823,
+          499
+        ],
+        [
+          823,
+          572
+        ],
+        [
+          770,
+          572
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          984,
+          511
+        ],
+        [
+          1036,
+          511
+        ],
+        [
+          1036,
+          581
+        ],
+        [
+          984,
+          581
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          819,
+          510
+        ],
+        [
+          869,
+          510
+        ],
+        [
+          869,
+          571
+        ],
+        [
+          819,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1038,
+          444
+        ],
+        [
+          1178,
+          444
+        ],
+        [
+          1178,
+          661
+        ],
+        [
+          1038,
+          661
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1038,
+          516
+        ],
+        [
+          1072,
+          516
+        ],
+        [
+          1072,
+          571
+        ],
+        [
+          1038,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1434,
+          416
+        ],
+        [
+          1576,
+          416
+        ],
+        [
+          1576,
+          637
+        ],
+        [
+          1434,
+          637
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1534,
+          499
+        ],
+        [
+          1658,
+          499
+        ],
+        [
+          1658,
+          640
+        ],
+        [
+          1534,
+          640
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_01581.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "description": ""
+}

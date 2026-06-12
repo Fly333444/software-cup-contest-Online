@@ -1,0 +1,272 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          848,
+          508
+        ],
+        [
+          898,
+          508
+        ],
+        [
+          898,
+          580
+        ],
+        [
+          848,
+          580
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1605,
+          372
+        ],
+        [
+          1804,
+          372
+        ],
+        [
+          1804,
+          677
+        ],
+        [
+          1605,
+          677
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          894,
+          517
+        ],
+        [
+          927,
+          517
+        ],
+        [
+          927,
+          568
+        ],
+        [
+          894,
+          568
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          563,
+          484
+        ],
+        [
+          642,
+          484
+        ],
+        [
+          642,
+          591
+        ],
+        [
+          563,
+          591
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          632,
+          505
+        ],
+        [
+          698,
+          505
+        ],
+        [
+          698,
+          581
+        ],
+        [
+          632,
+          581
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1056,
+          512
+        ],
+        [
+          1106,
+          512
+        ],
+        [
+          1106,
+          566
+        ],
+        [
+          1056,
+          566
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1260,
+          512
+        ],
+        [
+          1299,
+          512
+        ],
+        [
+          1299,
+          567
+        ],
+        [
+          1260,
+          567
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1431,
+          467
+        ],
+        [
+          1614,
+          467
+        ],
+        [
+          1614,
+          645
+        ],
+        [
+          1431,
+          645
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1098,
+          376
+        ],
+        [
+          1296,
+          376
+        ],
+        [
+          1296,
+          758
+        ],
+        [
+          1098,
+          758
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_01314.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}

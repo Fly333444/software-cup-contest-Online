@@ -1,0 +1,244 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          728,
+          493
+        ],
+        [
+          781,
+          493
+        ],
+        [
+          781,
+          574
+        ],
+        [
+          728,
+          574
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1174,
+          512
+        ],
+        [
+          1211,
+          512
+        ],
+        [
+          1211,
+          562
+        ],
+        [
+          1174,
+          562
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1051,
+          512
+        ],
+        [
+          1084,
+          512
+        ],
+        [
+          1084,
+          558
+        ],
+        [
+          1051,
+          558
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1227,
+          517
+        ],
+        [
+          1269,
+          517
+        ],
+        [
+          1269,
+          575
+        ],
+        [
+          1227,
+          575
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          972,
+          502
+        ],
+        [
+          1048,
+          502
+        ],
+        [
+          1048,
+          612
+        ],
+        [
+          972,
+          612
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1467,
+          452
+        ],
+        [
+          1567,
+          452
+        ],
+        [
+          1567,
+          637
+        ],
+        [
+          1467,
+          637
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1761,
+          492
+        ],
+        [
+          1840,
+          492
+        ],
+        [
+          1840,
+          579
+        ],
+        [
+          1761,
+          579
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          224,
+          487
+        ],
+        [
+          282,
+          487
+        ],
+        [
+          282,
+          595
+        ],
+        [
+          224,
+          595
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00054.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "description": ""
+}
