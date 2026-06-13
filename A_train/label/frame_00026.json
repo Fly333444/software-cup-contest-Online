@@ -1,0 +1,244 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1795,
+          508
+        ],
+        [
+          1867,
+          508
+        ],
+        [
+          1867,
+          582
+        ],
+        [
+          1795,
+          582
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1053,
+          518
+        ],
+        [
+          1077,
+          518
+        ],
+        [
+          1077,
+          564
+        ],
+        [
+          1053,
+          564
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1027,
+          511
+        ],
+        [
+          1055,
+          511
+        ],
+        [
+          1055,
+          564
+        ],
+        [
+          1027,
+          564
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1501,
+          515
+        ],
+        [
+          1541,
+          515
+        ],
+        [
+          1541,
+          574
+        ],
+        [
+          1501,
+          574
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1345,
+          476
+        ],
+        [
+          1413,
+          476
+        ],
+        [
+          1413,
+          604
+        ],
+        [
+          1345,
+          604
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          437,
+          429
+        ],
+        [
+          553,
+          429
+        ],
+        [
+          553,
+          662
+        ],
+        [
+          437,
+          662
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          781,
+          504
+        ],
+        [
+          810,
+          504
+        ],
+        [
+          810,
+          570
+        ],
+        [
+          781,
+          570
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          1136,
+          510
+        ],
+        [
+          1220,
+          510
+        ],
+        [
+          1220,
+          599
+        ],
+        [
+          1136,
+          599
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00026.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920,
+  "description": ""
+}

@@ -15,7 +15,6 @@ __pycache__/
 
 # Training data images (keep JSON annotations)
 A_train/Image/
-A_train/label/
 A_train/external_fire/
 
 # PaddleDetection vendor (install separately)

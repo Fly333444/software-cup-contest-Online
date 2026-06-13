@@ -1,0 +1,272 @@
+{
+  "version": "4.0.0-beta.5",
+  "flags": {},
+  "checked": false,
+  "shapes": [
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1067,
+          511
+        ],
+        [
+          1104,
+          511
+        ],
+        [
+          1104,
+          562
+        ],
+        [
+          1067,
+          562
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          345,
+          506
+        ],
+        [
+          391,
+          506
+        ],
+        [
+          391,
+          571
+        ],
+        [
+          345,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          1190,
+          503
+        ],
+        [
+          1229,
+          503
+        ],
+        [
+          1229,
+          580
+        ],
+        [
+          1190,
+          580
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          944,
+          525
+        ],
+        [
+          975,
+          525
+        ],
+        [
+          975,
+          564
+        ],
+        [
+          944,
+          564
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          321,
+          502
+        ],
+        [
+          380,
+          502
+        ],
+        [
+          380,
+          571
+        ],
+        [
+          321,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          1121,
+          522
+        ],
+        [
+          1160,
+          522
+        ],
+        [
+          1160,
+          571
+        ],
+        [
+          1121,
+          571
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "fire",
+      "score": null,
+      "points": [
+        [
+          794,
+          520
+        ],
+        [
+          820,
+          520
+        ],
+        [
+          820,
+          562
+        ],
+        [
+          794,
+          562
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "battery",
+      "score": null,
+      "points": [
+        [
+          693,
+          495
+        ],
+        [
+          739,
+          495
+        ],
+        [
+          739,
+          587
+        ],
+        [
+          693,
+          587
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    },
+    {
+      "label": "board",
+      "score": null,
+      "points": [
+        [
+          490,
+          509
+        ],
+        [
+          568,
+          509
+        ],
+        [
+          568,
+          591
+        ],
+        [
+          490,
+          591
+        ]
+      ],
+      "group_id": null,
+      "description": "",
+      "difficult": false,
+      "shape_type": "rectangle",
+      "flags": {},
+      "attributes": {},
+      "kie_linking": []
+    }
+  ],
+  "imagePath": "frame_00020.jpg",
+  "imageData": null,
+  "imageHeight": 1080,
+  "imageWidth": 1920
+}
