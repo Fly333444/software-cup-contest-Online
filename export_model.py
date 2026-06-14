@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Export trained PicoDet-M model to Paddle Inference format.
+"""Export trained PicoDet-L model to Paddle Inference format.
 
 Usage:
     python export_model.py
@@ -30,7 +30,7 @@ def find_best_weights():
 def main():
     paddle.set_device('gpu')
 
-    config_path = os.path.join(BASE_DIR, "configs", "picodet_m_fire_v13.yml")
+    config_path = os.path.join(BASE_DIR, "configs", "picodet_l_fire_v15.yml")
     cfg = load_config(config_path)
     cfg.TrainDataset.dataset_dir = BASE_DIR
     cfg.EvalDataset.dataset_dir = BASE_DIR

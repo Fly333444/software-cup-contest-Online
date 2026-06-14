@@ -66,7 +66,7 @@ def compute_per_class_f1(gt_path, dt_path):
 
 
 def main():
-    config_path = os.path.join(BASE_DIR, "configs", "picodet_m_fire_v13.yml")
+    config_path = os.path.join(BASE_DIR, "configs", "picodet_l_fire_v15.yml")
     cfg = load_config(config_path)
     cfg.TrainDataset.dataset_dir = BASE_DIR
     cfg.EvalDataset.dataset_dir = BASE_DIR

@@ -4,7 +4,7 @@
 Called by evaluation system:
     python predict.py <data_txt> <result_json> [threshold]
 
-v9: v2.2 PicoDet-M TensorRT backbone + v6.0 per-class threshold + batch inference
+v15: PicoDet-L (LCNet 2.0x) inference
 """
 import os
 import sys

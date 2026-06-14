@@ -4,11 +4,12 @@ This file provides guidance to Claude Code when working with code in this reposi
 
 ## Project Overview
 
-火情检测竞赛项目 — v13.0 (历史最优 🏆)  
-基于 PaddleDetection 框架训练 PicoDet-M 3 类目标检测模型 (battery/board/fire)，导出 Paddle Inference 格式提交到 AI Studio 评测。
+火情检测竞赛项目 — v15.0 (PicoDet-L 升级版)  
+基于 PaddleDetection 框架训练 PicoDet-L 3 类目标检测模型 (battery/board/fire)，导出 Paddle Inference 格式提交到 AI Studio 评测。
 
-**线上成绩**: F1=**0.89144** (历史最高), FPS=**40.37**  
-**核心策略**: 原始比赛标注 + 人工修正，回归 v2.2/v9 验证配方 (PicoDet-M 416, GridMask+多尺度, 200e)
+**v13 线上成绩 (Baseline)**: F1=**0.89144**, FPS=**40.37**  
+**v15 升级**: PicoDet-M → PicoDet-L (LCNet 1.5x→2.0x, 3.46M→~5.8M params)  
+**核心策略**: V13 历史最优配方 + 更大模型 + 原始标注 + 人工修正
 
 比赛规则在 `机器狗_AR目标检测比赛规则.md` 中。
 **关键约束**: 模型 ≤200MB, V100 GPU, FPS ≥20, 入口 `python predict.py data.txt result.json`
@@ -23,7 +24,7 @@ This file provides guidance to Claude Code when working with code in this reposi
 ```bash
 conda activate fire_env1
 python convert_labelme_to_coco.py     # LabelMe → COCO, 80/20 划分
-python train.py                        # 训练 (PicoDet-M 416, 200e)
+python train.py                        # 训练 (PicoDet-L 416, 200e)
 python evaluate.py                     # 评估验证集 (mAP + 每类 F1)
 python sweep_threshold.py              # 扫描 score_threshold 找最优值
 python export_model.py                 # 导出 Paddle Inference 模型到 model/
@@ -37,7 +38,7 @@ python package.py                      # 打包 submission.zip
 
 | 脚本 | 说明 |
 |------|------|
-| `train.py` | 训练入口，默认加载 `configs/picodet_m_fire_v13.yml` |
+| `train.py` | 训练入口，默认加载 `configs/picodet_l_fire_v15.yml` |
 | `predict.py` | 推理入口，加载 Paddle Inference 模型 |
 | `evaluate.py` | COCO mAP + per-class F1 @ IoU=0.5 评估 |
 | `export_model.py` | checkpoint → Paddle Inference 静态图格式 |
@@ -47,21 +48,19 @@ python package.py                      # 打包 submission.zip
 
 ### 目录结构
 
-- `A_train/` — 训练数据: `Image/` (405 JPEG), `label/` (405 LabelMe JSON), `train.json`/`val.json` (COCO)
-- `configs/` — YAML 训练配置 (v13 用 `picodet_m_fire_v13.yml`)
+- `A_train/` — 训练数据: `Image/` (408 JPEG), `label/` (405 LabelMe JSON), `train.json`/`val.json` (COCO)
+- `configs/` — YAML 训练配置 (v15 用 `picodet_l_fire_v15.yml`)
 - `model/` — 导出的 Paddle Inference 模型
 - `output/` — 训练 checkpoint
 
-### 当前模型状态 (v13.0)
+### 当前模型状态 (v15.0 — PicoDet-L 新实验)
 
-**PicoDet-M 416×416, 200 epoch, GridMask + 多尺度 320~576**
-- **线上结果**: F1=**0.89144** (历史最高), FPS=**40.37**
-- **训练数据**: 原始比赛标注 (126+92+712) + 人工修正 (+10), 324 train / 81 val
-- **Best mAP**: 0.707 (val), AP@0.50=0.865
-- **本地 Mean F1**: 0.9751 (battery=0.9831, board=0.9500, fire=0.9924)
-- **最优阈值**: global=0.05 (本地 F1=0.9590)
-- **模型大小**: 13.7 MB
-- **预训练**: COCO PicoDet-M (picodet_m_320_coco_lcnet.pdparams)
+**PicoDet-L 416×416, 200 epoch, GridMask + 多尺度 320~576**
+- **模型**: PicoDet-L (LCNet 2.0x, ~5.8M params, LCPAN 160ch)
+- **预训练**: COCO PicoDet-L (`picodet_l_320_coco_lcnet.pdparams`)
+- **数据集**: 原始比赛标注 + 人工修正, 324 train / 81 val
+- **增强**: GridMask + BatchRandomResize 320~576 + RandomDistort
+- **优化器**: Momentum + CosineDecay, base_lr=0.04, EMA
 
 ### 推理命令 (AI Studio)
 
