@@ -67,3 +67,41 @@ python package.py                      # 打包 submission.zip
 ```bash
 python predict.py data.txt result.json 0.05
 ```
+
+## Git 推送流程（推送 v15 到队长仓库）
+
+### 基础信息
+
+- **当前仓库**: `submission_v15/` 目录下的 `.git`（只有这个目录有完整 git 仓库）
+- **远程**: `origin = https://github.com/Fly333444/software-cup-contest-Online.git`
+- **分支**: `Summit-online-best-version`（最佳版本专用分支）
+- **Git 可执行文件**: 用 GitHub Desktop 自带的（不要假设系统 PATH 有 git）
+  ```bash
+  GIT="/c/Users/LENOVO/AppData/Local/GitHubDesktop/app-*/resources/app/git/cmd/git.exe"
+  ```
+  注意版本号会变（当前 `app-3.5.4`），用通配符 `*`
+
+### 完整推送命令（在 bash 中运行）
+
+```bash
+# 1. 进入 v15 目录（它自己有 .git）
+cd /e/"Study files"/Ruanjian/submission_v15
+
+# 2. 用完整路径调用 git（系统 PATH 可能找不到 git）
+GIT=/c/Users/LENOVO/AppData/Local/GitHubDesktop/app-*/resources/app/git/cmd/git.exe
+
+# 3. 确保在正确分支
+$GIT branch  # 应该显示 * Summit-online-best-version
+
+# 4. 添加所有变更、提交、推送
+$GIT add -A
+$GIT commit -m "描述变更内容"
+$GIT push origin Summit-online-best-version
+```
+
+### 注意事项
+
+1. **不要在 CMD 中运行**，必须在 bash 中（Claude Code 的环境）
+2. **不用写 `-C` 参数**，因为已经在目录内，cd 进去即可
+3. **Credential** 用 Windows 凭据管理器（已配置 `credential.helper=manager`），推送时会自动使用 GitHub Desktop 缓存的认证
+4. **如果 Git 插件 403** → 走本地 git 方式，不要事和 GitHub API 插件死磕
