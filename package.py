@@ -1,16 +1,22 @@
 # -*- coding: utf-8 -*-
-"""Package submission.zip for AI Studio evaluation."""
-import os
+"""Package submission.zip for B榜 evaluation.
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+Usage:
+    python package.py
+"""
+import os
+import sys
+import zipfile
+
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 
 def check_required_files():
     errors = []
-    if not os.path.exists(os.path.join(BASE_DIR, "predict.py")):
+    if not os.path.exists(os.path.join(SCRIPT_DIR, "predict.py")):
         errors.append("predict.py missing")
 
-    model_dir = os.path.join(BASE_DIR, "model")
+    model_dir = os.path.join(SCRIPT_DIR, "model")
     if not os.path.isdir(model_dir):
         errors.append("model/ directory missing")
     else:
@@ -31,14 +37,6 @@ def check_required_files():
         if total > 200 * 1024 * 1024:
             errors.append(f"model/ too large: {mb:.1f} MB > 200 MB")
 
-    deploy_dir = os.path.join(BASE_DIR, "PaddleDetection", "deploy", "python")
-    if not os.path.isdir(deploy_dir):
-        errors.append("PaddleDetection/deploy/python/ missing")
-    else:
-        for fname in ["preprocess.py", "utils.py", "keypoint_preprocess.py"]:
-            if not os.path.exists(os.path.join(deploy_dir, fname)):
-                errors.append(f"PaddleDetection/deploy/python/{fname} missing")
-
     return errors
 
 
@@ -53,33 +51,34 @@ def main():
 
     print("\nAll checks passed!")
 
-    zip_path = os.path.join(BASE_DIR, "submission.zip")
+    zip_path = os.path.join(SCRIPT_DIR, "submission.zip")
     if os.path.exists(zip_path):
         os.remove(zip_path)
 
-    import zipfile
-
     with zipfile.ZipFile(zip_path, 'w', zipfile.ZIP_DEFLATED) as zf:
-        # predict.py
-        zf.write('predict.py', 'predict.py')
+        # predict.py (self-contained, no PaddleDetection needed)
+        zf.write(os.path.join(SCRIPT_DIR, 'predict.py'), 'predict.py')
 
         # model files
+        model_dir = os.path.join(SCRIPT_DIR, 'model')
         for f in ['infer_cfg.yml', 'model.pdmodel', 'model.pdiparams']:
-            zf.write(os.path.join('model', f), os.path.join('model', f))
-
-        # PaddleDetection deploy files
-        deploy_base = 'PaddleDetection/deploy/python'
-        for f in ['preprocess.py', 'utils.py', 'keypoint_preprocess.py']:
-            zf.write(os.path.join(deploy_base, f), os.path.join(deploy_base, f))
+            fp = os.path.join(model_dir, f)
+            if os.path.exists(fp):
+                zf.write(fp, os.path.join('model', f))
+                print(f"  + model/{f}")
 
     zip_size = os.path.getsize(zip_path) / (1024 * 1024)
-    print(f"\nCreated: {zip_path} ({zip_size:.1f} MB)")
+    print(f"\nCreated: submission.zip ({zip_size:.1f} MB)")
 
     # Verify zip contents
     print("\nZip contents:")
     with zipfile.ZipFile(zip_path, 'r') as zf:
         for info in zf.infolist():
-            print(f"  {info.filename} ({info.file_size} bytes)")
+            size_mb = info.file_size / (1024 * 1024)
+            if size_mb > 0.1:
+                print(f"  {info.filename:50s} {size_mb:.1f} MB")
+            else:
+                print(f"  {info.filename:50s} {info.file_size / 1024:.1f} KB")
 
 
 if __name__ == "__main__":
